@@ -1,18 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <StatusBar style='auto'
+        hidden={false}
+        translucent={false}
+        backgroundColor='gray'
+        />
+        <Text>How about icons</Text>
+        <ScrollView
+          horizontal={true}
+          style={{ width: '100%', height: 30, backgroundColor: 'red' }}>
+          <FontAwesome name="microchip" size={100} color="black" />
+          <FontAwesome name="microchip" size={100} color="black" />
+          <FontAwesome name="microchip" size={100} color="black" />
+          <FontAwesome name="glass" size={100} color="black" />
+          <FontAwesome name="film" size={100} color="black" />
+          <FontAwesome name="road" size={100} color="black" />
+        </ScrollView>
+        <FontAwesome name="microchip" size={100} color="black" />
+        <FontAwesome name="glass" size={100} color="black" />
+        <FontAwesome name="film" size={100} color="black" />
+        <FontAwesome name="road" size={100} color="black" />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
