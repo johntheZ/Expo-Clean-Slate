@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 import { MyAnimated } from './views/MyAnimated';
 import { MyIcons } from './views/MyIcons';
+import ReactAnimated from './views/ReactAnimated';
+import { LayoutAnimationed } from './views/LayoutAnimationed';
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +57,8 @@ export function MyStacks() {
     >
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="MyAnimated" component={MyAnimated} />
+      <Stack.Screen name="ReactAnimated" component={ReactAnimated} />
+      <Stack.Screen name="LayoutAnimationed" component={LayoutAnimationed} />
       <Stack.Screen name="MyIcons" component={MyIcons} />
     </Stack.Navigator>
   );
