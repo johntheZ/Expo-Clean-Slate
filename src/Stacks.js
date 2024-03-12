@@ -6,6 +6,8 @@ import { MyAnimated } from './views/MyAnimated';
 import { MyIcons } from './views/MyIcons';
 import ReactAnimated from './views/ReactAnimated';
 import { LayoutAnimationed } from './views/LayoutAnimationed';
+import { MyStateHook } from './views/MyStateHook';
+import HookForm from './views/HookForm';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,16 +51,18 @@ function HomeScreen({ navigation }) {
   );
 }
 
-
 export function MyStacks() {
   return (
-    <Stack.Navigator
-      initialRouteName={"HomeScreen"}
-    >
+    <Stack.Navigator initialRouteName={"HomeScreen"} >
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      {/* hook related */}
+      <Stack.Screen name="MyStateHook" component={MyStateHook} />
+      <Stack.Screen name="HookForm" component={HookForm} />
+      {/* animation related */}
       <Stack.Screen name="MyAnimated" component={MyAnimated} />
-      <Stack.Screen name="ReactAnimated" component={ReactAnimated} />
       <Stack.Screen name="LayoutAnimationed" component={LayoutAnimationed} />
+      <Stack.Screen name="ReactAnimated" component={ReactAnimated} />
+      {/* icons related */}
       <Stack.Screen name="MyIcons" component={MyIcons} />
     </Stack.Navigator>
   );
