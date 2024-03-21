@@ -5,7 +5,9 @@ import { FontAwesome } from '@expo/vector-icons';
 import { MyStacks } from './src/Stacks';
 import { NavigationContainer } from '@react-navigation/native';
 
+let rr = 0;
 export default function App() {
+  rr++;
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style='auto'
@@ -13,6 +15,7 @@ export default function App() {
         translucent={false}
         backgroundColor='gray'
       />
+      <Text> {"Root SafeAreaView rr: " + rr} </Text>
       <NavigationContainer>
         <MyStacks />
       </NavigationContainer>
