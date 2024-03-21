@@ -4,6 +4,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { MyStacks } from './src/Stacks';
 import { NavigationContainer } from '@react-navigation/native';
+import Toast from 'react-native-toast-message';
 
 let rr = 0;
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
       <Text> {"Root SafeAreaView rr: " + rr} </Text>
       <NavigationContainer>
         <MyStacks />
+        <Toast />
       </NavigationContainer>
     </SafeAreaView>
   );

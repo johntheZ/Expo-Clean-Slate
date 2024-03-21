@@ -8,6 +8,7 @@ import ReactAnimated from './views/ReactAnimated';
 import { LayoutAnimationed } from './views/LayoutAnimationed';
 import { MyStateHook } from './views/MyStateHook';
 import HookForm from './views/HookForm';
+import { ToastControl } from './views/ToastControl';
 
 const Stack = createNativeStackNavigator();
 let hr = 0;
@@ -70,6 +71,8 @@ export function MyStacks() {
         <Stack.Screen name="ReactAnimated" component={ReactAnimated} />
         {/* icons related */}
         <Stack.Screen name="MyIcons" component={MyIcons} />
+        {/* toast related */}
+        <Stack.Screen name="ToastControl" component={ToastControl} />
       </Stack.Navigator>
     </>
   );
